@@ -54,6 +54,7 @@ int main() {
     }
   }
 
+
   //Tells the user what the data range is and then asks how many partitions
   //should be used
   std::cout << "The range of data is " << min << " to " << max << '\n';
