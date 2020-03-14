@@ -34,7 +34,7 @@ int main() {
   //mostly random numbers (not completely random because the generator is seed based)
   std::random_device device;
   std::mt19937 generator(device());
-  std::uniform_int_distribution<signed long> rng(-2147483647, 2147483647);
+  std::uniform_int_distribution<signed long> rng;
   std::uniform_int_distribution<int> select;
 
   //Fill the 'original' vector with random signed integers
@@ -92,10 +92,8 @@ int main() {
     std::cin >> input;
     std::cout << "Checking if "<< input << " exists in a partition..." <<'\n';
     singleValueAdd(input, sorted, n, min, max);
-    do {
-      std::cout << "Search for another value? (yes/no) >";
-      std::cin >> response;
-    } while(response != "no" || response != "yes");std::cin >> response;
+    std::cout << "Search for another value? (yes/no) >";
+    std::cin >> response;
   } while(response != "no");
   return 0;
 }
